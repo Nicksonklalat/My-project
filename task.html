@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Scheduler</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Scheduler</h1>
+        <form id="taskForm">
+            <input type="text" id="taskTitle" placeholder="Task Title" required>
+            <textarea id="taskDescription" placeholder="Task Description"></textarea>
+            <select id="taskCategory">
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="shopping">Shopping</option>
+                <option value="top priority">Top Priority</option>
+            </select>
+            <input type="datetime-local" id="taskDeadline" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <div class="task-options">
+            <label>Filter by category:</label>
+            <select id="filterOption">
+                <option value="all">All</option>
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="shopping">Shopping</option>
+                <option value="top priority">Top Priority</option>
+            </select>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <div id="editModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Edit Task</h2>
+    <input type="text" id="editTitle" placeholder="Enter new title">
+    <textarea id="editDescription" placeholder="Enter new description"></textarea>
+    <button id="saveChanges">Save</button>
+  </div>
+
+    <script src="task.js"></script>
+</body>
+</html>
